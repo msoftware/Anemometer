@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name" translatable="false">Anemometer</string>
+    <string name="title_activity_request_autorization">Authorization</string>
+    <string name="accuracy">GPS Accuracy %1$s m</string>
+    <string name="speed">GPS Speed %1$s m/s</string>
+    <string name="factor">Factor %1$s m</string>
+    <string name="intercept">Intercept %.3f</string>
+    <string name="slope">Slope %.3f</string>
+    <string name="accuracy_">GPS Accuracy </string>
+    <string name="speed_">GPS Speed </string>
+    <string name="factor_">Factor </string>
+    <string name="permission_alert_msg">Authorize the use of your location</string>
+    <string name="permission_alert_text">To continue it is necessary to allow access to the location</string>
+    <string name="permission_alert_button_label">Allow access</string>
+    <string name="navigation_button">Navigation</string>
+    <string name="help">Help</string>
+    <string name="settings">Settings</string>
+    <string name="calibration">Calibration</string>
+    <string name="calibration_info">No calibration found. Please run calibration first.</string>
+    <string name="wind_speed">Wind speed</string>
+    <string name="meterpersecond">m/s</string>
+    <string name="kmperhour">km/h</string>
+    <string name="bft">bft</string>
+    <string name="ok">OK</string>
+    <string name="save_ok">Calibration data saved</string>
+    <string name="calibration_factor">Calibration factor</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="anemometer_settings">Anemometer Settings</string>
+    <string name="calibration_settings">Calibration Settings</string>
+    <string name="min_calibration_speed">Min. calibration speed</string>
+    <string name="meter">m</string>
+    <string name="min_gps_accuracy">Min. GPS accuracy</string>
+    <string name="min_rotation_frequency">Min. rotation frequency</string>
+    <string name="hz">Hz</string>
+    <string name="lowpass_filter">Lowpass filter</string>
+    <string name="lowpass_filter_low">low</string>
+    <string name="lowpass_filter_medium">medium</string>
+    <string name="lowpass_filter_hight">high</string>
+    <string name="lowpass_filter_undefined">undefined</string>
+    <string name="calibration_help">Start calibration by moving your smartphone on a windless day.\n\n
+By measuring the GPS speed and the sensor rotation on different velocities the calibration will be done.\n\n
+After a few minutes of calibration you can save the calibration factor with OK.\n\n
+You can change the calibration data afterwards in the settings.
+    </string>
+    <string name="start_calibration">Start calibration</string>
+    <string name="value_out_of_range">Error: Value out of range</string>
+    <string name="no_permission">Sorry, calibration is not possible without granted permission</string>
+    <string name="save">Save</string>
+    <string name="fake">Fake</string>
+    <string name="rotation_speed_note">* Rotation speed without lowpass filter</string>
+</resources>

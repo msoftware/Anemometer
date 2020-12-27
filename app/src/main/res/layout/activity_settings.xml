@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="80dp"
+        tools:context=".SettingsActivity">
+
+        <TextView
+            android:id="@+id/title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/title_background"
+            android:padding="16dp"
+            android:text="@string/anemometer_settings"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/calibrationTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/calibration_factor"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title1" />
+
+        <Button
+            android:id="@+id/calibrationMinus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/minus"
+            android:onClick="onCalibrationMinus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:background="@drawable/round_button"
+            app:layout_constraintStart_toStartOf="@+id/calibrationTitle"
+            app:layout_constraintTop_toBottomOf="@+id/calibrationTitle" />
+
+        <TextView
+            android:id="@+id/calibrationValue"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="0.00"
+            android:gravity="right"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/calibrationMinus"
+            app:layout_constraintStart_toEndOf="@+id/calibrationMinus"
+            app:layout_constraintTop_toTopOf="@+id/calibrationMinus" />
+
+        <Button
+            android:id="@+id/calibrationPlus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/plus"
+            android:onClick="onCalibrationPlus"
+            android:background="@drawable/round_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/calibrationMinus"
+            app:layout_constraintStart_toEndOf="@+id/calibrationValue"
+            app:layout_constraintTop_toTopOf="@+id/calibrationMinus" />
+
+
+        <TextView
+            android:id="@+id/lowpassFilterTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/lowpass_filter"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calibrationMinus" />
+
+        <Button
+            android:id="@+id/lowpassFilterMinus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/minus"
+            android:onClick="onLowpassFilterMinus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:background="@drawable/round_button"
+            app:layout_constraintStart_toStartOf="@+id/lowpassFilterTitle"
+            app:layout_constraintTop_toBottomOf="@+id/lowpassFilterTitle" />
+
+        <TextView
+            android:id="@+id/lowpassFilterValue"
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="low"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/lowpassFilterMinus"
+            app:layout_constraintStart_toEndOf="@+id/lowpassFilterMinus"
+            app:layout_constraintTop_toTopOf="@+id/lowpassFilterMinus" />
+
+        <Button
+            android:id="@+id/lowpassFilterPlus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:text="@string/plus"
+            android:onClick="onLowpassFilterPlus"
+            android:background="@drawable/round_button"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/lowpassFilterMinus"
+            app:layout_constraintStart_toEndOf="@+id/lowpassFilterValue"
+            app:layout_constraintTop_toTopOf="@+id/lowpassFilterMinus" />
+
+
+
+
+
+
+
+
+
+
+        <TextView
+            android:id="@+id/title2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="124dp"
+            android:background="@color/title_background"
+            android:padding="16dp"
+            android:text="@string/calibration_settings"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/calibrationPlus" />
+
+        <TextView
+            android:id="@+id/calibrationSpeedTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/min_calibration_speed"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title2" />
+
+        <Button
+            android:id="@+id/minCalibrationSpeedMinus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/minus"
+            android:onClick="onMinCalibrationSpeedMinus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:background="@drawable/round_button"
+            app:layout_constraintStart_toStartOf="@+id/calibrationSpeedTitle"
+            app:layout_constraintTop_toBottomOf="@+id/calibrationSpeedTitle" />
+
+        <TextView
+            android:id="@+id/minCalibrationSpeedValue"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="0.00"
+            android:gravity="right"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/minCalibrationSpeedMinus"
+            app:layout_constraintStart_toEndOf="@+id/minCalibrationSpeedMinus"
+            app:layout_constraintTop_toTopOf="@+id/minCalibrationSpeedMinus" />
+
+
+        <TextView
+            android:id="@+id/minCalibrationSpeedUnit"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/meterpersecond"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/minCalibrationSpeedValue"
+            app:layout_constraintStart_toEndOf="@+id/minCalibrationSpeedValue"
+            app:layout_constraintTop_toTopOf="@+id/minCalibrationSpeedValue"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/minCalibrationSpeedPlus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/round_button"
+            android:onClick="onMinCalibrationSpeedPlus"
+            android:text="@string/plus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/minCalibrationSpeedMinus"
+            app:layout_constraintStart_toEndOf="@+id/minCalibrationSpeedUnit"
+            app:layout_constraintTop_toTopOf="@+id/minCalibrationSpeedMinus"
+            app:layout_constraintVertical_bias="0.0" />
+
+
+        <TextView
+            android:id="@+id/minGPSAccuracyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/min_gps_accuracy"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minCalibrationSpeedMinus" />
+
+        <Button
+            android:id="@+id/minGPSAccuracyMinus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_button"
+            android:onClick="onMinGPSAccuracyMinus"
+            android:text="@string/minus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="@+id/calibrationSpeedTitle"
+            app:layout_constraintTop_toBottomOf="@+id/minGPSAccuracyTitle" />
+
+        <TextView
+            android:id="@+id/minGPSAccuracyValue"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="0.00"
+            android:gravity="right"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/minGPSAccuracyMinus"
+            app:layout_constraintStart_toEndOf="@+id/minGPSAccuracyMinus"
+            app:layout_constraintTop_toTopOf="@+id/minGPSAccuracyMinus" />
+
+
+        <TextView
+            android:id="@+id/minGPSAccuracyUnit"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/meter"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/minGPSAccuracyValue"
+            app:layout_constraintStart_toEndOf="@+id/minGPSAccuracyValue"
+            app:layout_constraintTop_toTopOf="@+id/minGPSAccuracyValue"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <Button
+            android:id="@+id/minGPSAccuracyPlus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/round_button"
+            android:onClick="onMinGPSAccuracyPlus"
+            android:text="@string/plus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/minGPSAccuracyMinus"
+            app:layout_constraintStart_toEndOf="@+id/minGPSAccuracyUnit"
+            app:layout_constraintTop_toTopOf="@+id/minGPSAccuracyMinus"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/minRotationFrequencyTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="@string/min_rotation_frequency"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/minGPSAccuracyMinus" />
+
+        <Button
+            android:id="@+id/minRotationFrequencyMinus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/round_button"
+            android:onClick="onMinRotationFrequencyMinus"
+            android:text="@string/minus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintStart_toStartOf="@+id/minRotationFrequencyTitle"
+            app:layout_constraintTop_toBottomOf="@+id/minRotationFrequencyTitle" />
+
+        <TextView
+            android:id="@+id/minRotationFrequencyValue"
+            android:layout_width="64dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="0.00"
+            android:gravity="right"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/minRotationFrequencyMinus"
+            app:layout_constraintStart_toEndOf="@+id/minGPSAccuracyMinus"
+            app:layout_constraintTop_toTopOf="@+id/minRotationFrequencyMinus" />
+
+
+        <TextView
+            android:id="@+id/minRotationFrequencyUnit"
+            android:layout_width="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/hz"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+            android:textColor="@android:color/white"
+            app:layout_constraintBottom_toBottomOf="@+id/minRotationFrequencyValue"
+            app:layout_constraintStart_toEndOf="@+id/minGPSAccuracyValue"
+            app:layout_constraintTop_toTopOf="@+id/minRotationFrequencyValue"
+            app:layout_constraintVertical_bias="1.0" />
+
+
+        <Button
+            android:id="@+id/minRotationFrequencyPlus"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="16dp"
+            android:background="@drawable/round_button"
+            android:onClick="onMinRotationFrequencyPlus"
+            android:text="@string/plus"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:layout_constraintBottom_toBottomOf="@+id/minRotationFrequencyUnit"
+            app:layout_constraintStart_toEndOf="@+id/minRotationFrequencyUnit"
+            app:layout_constraintTop_toTopOf="@+id/minRotationFrequencyUnit" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

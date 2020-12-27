@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Anemometer</string>
+    <string name="accuracy">GPS Genauigkeit %1$s m</string>
+    <string name="title_activity_request_autorization">Berechtigung</string>
+    <string name="speed">GPS Geschwindigkeit %1$s m/s</string>
+    <string name="factor">Faktor %1$s m</string>
+    <string name="intercept">Schnittpunkt %.3f</string>
+    <string name="slope">Steigung %.3f</string>
+    <string name="accuracy_">GPS Genauigkeit</string>
+    <string name="speed_">GPS Geschwindigkeit</string>
+    <string name="factor_">Faktor</string>
+    <string name="permission_alert_msg">Autorisieren Sie die Verwendung Ihres Standorts</string>
+    <string name="permission_alert_text">Um fortzufahren, ist es notwendig, den Zugriff auf den Standort zu erlauben</string>
+    <string name="permission_alert_button_label">Zugriff erlauben</string>
+    <string name="navigation_button">Navigation</string>
+    <string name="help">Hilfe</string>
+    <string name="settings">Einstellungen</string>
+    <string name="calibration">Kalibrierung</string>
+    <string name="calibration_info">Keine Kalibrierung gefunden. Bitte führen Sie zuerst die Kalibrierung durch.</string>
+    <string name="wind_speed">Windgeschwindigkeit</string>
+    <string name="meterpersecond">m/s</string>
+    <string name="kmperhour">km/h</string>
+    <string name="bft">bft</string>
+    <string name="ok">OK</string>
+    <string name="save_ok">Kalibrierungsdaten gespeichert</string>
+    <string name="calibration_factor">Kalibrierungsfaktor</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
+    <string name="anemometer_settings">Anemometer-Einstellungen</string>
+    <string name="calibration_settings">Kalibrierungseinstellungen</string>
+    <string name="min_calibration_speed">Min. Kalibrierungsgeschwindigkeit</string>
+    <string name="meter">m</string>
+    <string name="min_gps_accuracy">Min. GPS-Genauigkeit</string>
+    <string name="min_rotation_frequency">Min. Drehfrequenz</string>
+    <string name="hz">Hz</string>
+    <string name="lowpass_filter">Tiefpass Filter</string>
+    <string name="lowpass_filter_low">gering</string>
+    <string name="lowpass_filter_medium">mittel</string>
+    <string name="lowpass_filter_hight">stark</string>
+    <string name="lowpass_filter_undefined">undefiniert</string>
+    <string name="calibration_help">Starten Sie die Kalibrierung, indem Sie Ihr Smartphone an einem windstillen Tag bewegen.\n\n
+Durch Messung der GPS-Geschwindigkeit und der Sensordrehung bei verschiedenen Geschwindigkeiten wird die Kalibrierung durchgeführt.\n\n
+Nach einigen Minuten können Sie den Kalibrierungsfaktor speichern.\n\n
+Sie können die Kalibrierungsdaten anschließend in den Einstellungen ändern.
+    </string>
+    <string name="start_calibration">Kalibrierung starten</string>
+    <string name="value_out_of_range">Fehler: Wert außerhalb des Bereichs</string>
+    <string name="no_permission">Eine Kalibrierung ist ohne Berechtigung leider nicht möglich</string>
+    <string name="save">Speichern</string>
+    <string name="fake">Fake</string>
+    <string name="rotation_speed_note">* Rotationsgeschwindigkeit ohne Tiefpassfilter</string>
+</resources>
